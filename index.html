@@ -2,16 +2,25 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>中藥品位置查詢</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <div class="container">
     <h1>🔍 中藥品位置查詢</h1>
-    <input id="searchBox" type="text" placeholder="輸入關鍵字或錯字…" />
-    <button id="searchBtn">搜尋</button>
+    <form id="searchForm">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="輸入關鍵字或錯字…"
+        autocomplete="off"
+      />
+      <button id="searchBtn" type="submit">搜尋</button>
+    </form>
     <div id="results"></div>
   </div>
+
   <!-- 讀 CSV 用 PapaParse -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <!-- 模糊搜尋 Fuse.js -->
